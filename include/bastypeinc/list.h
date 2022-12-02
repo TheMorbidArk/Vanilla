@@ -2,37 +2,33 @@
 #ifndef _LIST_H
 #define _LIST_H
 
-typedef struct s_LIST_H {
-    struct s_LIST_H *prev, *next;
-} list_t;
-
 /* List Init */
-static inline void listInit(list_t *list) {
+static inline void listInit(list_h_t *list) {
     list->prev = list;
     list->next = list;
     return;
 }
 
 /* List Delete */
-static inline void __listDel(list_t *prev, list_t *next) {
+static inline void __listDel(list_h_t *prev, list_h_t *next) {
     next->prev = prev;
     prev->next = next;
     return;
 }
 
-static inline void __listDelEntry(list_t *entry) {
+static inline void __listDelEntry(list_h_t *entry) {
     __listDel(entry->prev, entry->next);
     return;
 }
 
-static inline void listDel(list_t *entry) {
+static inline void listDel(list_h_t *entry) {
     __listDel(entry->prev, entry->next);
     listInit(entry);
     return;
 }
 
 /* List Add */
-static inline void __listAdd(list_t *list, list_t *prev, list_t *next) {
+static inline void __listAdd(list_h_t *list, list_h_t *prev, list_h_t *next) {
     next->prev = list;
     list->next = next;
     list->prev = prev;
@@ -40,24 +36,24 @@ static inline void __listAdd(list_t *list, list_t *prev, list_t *next) {
     return;
 }
 
-static inline void listAdd(list_t *list, list_t *head) {
+static inline void listAdd(list_h_t *list, list_h_t *head) {
     __listAdd(list, head, head->next);
     return;
 }
 
-static inline void listAddTail(list_t *list, list_t *head) {
+static inline void listAddTail(list_h_t *list, list_h_t *head) {
     __listAdd(list, head->prev, head);
     return;
 }
 
 /* List Move */
-static inline void listMove(list_t *list, list_t *head) {
+static inline void listMove(list_h_t *list, list_h_t *head) {
     listDel(list);
     listAdd(list, head);
     return;
 }
 
-static inline void listMoveTail(list_t *list, list_t *head) {
+static inline void listMoveTail(list_h_t *list, list_h_t *head) {
     listDel(list);
     listAddTail(list, head);
     return;
@@ -65,19 +61,19 @@ static inline void listMoveTail(list_t *list, list_t *head) {
 
 /* List is Empty */
 
-static inline bool listIsEmpty(list_t *head) {
+static inline bool_t listIsEmpty(list_h_t *head) {
     if (head == head->next) {
-        return true;
+        return TRUE;
     }
-    return false;
+    return FALSE;
 }
 
-static inline bool listIsEmptyCareful(list_t *head) {
-    list_t *list = head->next;
-    if (list == head && next == head->prev) {
-        return true;
+static inline bool_t listIsEmptyCareful(list_h_t *head) {
+    list_h_t *list = head->next;
+    if (list == head && list == head->prev) {
+        return TRUE;
     }
-    return false;
+    return FALSE;
 }
 
 #define listForEach(pos, head) \
