@@ -1,8 +1,7 @@
-//
-// Created by morbidark on 22-12-4.
-//
 
-#ifndef VANILLA_HALTYPE_H
-#define VANILLA_HALTYPE_H
+#ifndef _HALTYPE_H
+#define _HALTYPE_H
 
-#endif //VANILLA_HALTYPE_H
+#include "platform_t.h"
+
+#endif //_HALTYPE_H

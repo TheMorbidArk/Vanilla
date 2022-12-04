@@ -6,4 +6,6 @@
 #ifndef _VANILLACTRL_H
 #define _VANILLACTRL_H
 
+#include "halHead.h"
+
 #endif

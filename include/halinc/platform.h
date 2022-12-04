@@ -2,17 +2,22 @@
 //        平台相关的宏定义文件platform.h
 #ifndef _PLATFORM_H
 #define _PLATFORM_H
-void init_paltform();
 
-#ifdef CFG_S3C2440_PLATFORM
-LKHEAD_T void s3c2440mmu_init();
-LKHEAD_T void s3c2440mmu_invalid_dicache();
-LKHEAD_T void s3c2440mmu_set_domain(u32_t domain);
-LKHEAD_T void s3c2440mmu_set_tblbass(u32_t tblbphyadr);
-LKHEAD_T void s3c2440mmu_enable();
-LKHEAD_T void s3c2440vector_init();
-LKHEAD_T void s3c2440vector_copy();
+#include "config.h"
+
+void initPaltform();
+
+//#ifdef CFG_S3C2440_PLATFORM
+
+LKHEAD_T void s3c2440mmuInit();
+LKHEAD_T void s3c2440mmuInvalidDicache();
+LKHEAD_T void s3c2440mmuSetDomain(u32_t domain);
+LKHEAD_T void s3c2440mmuSetTblbass(u32_t tblbphyadr);
+LKHEAD_T void s3c2440mmuEnable();
+LKHEAD_T void s3c2440vectorInit();
+LKHEAD_T void s3c2440vectorCopy();
 extern void vector();
-#endif
 
-#endif // PLATFORM_S3C2440_H
+//#endif
+
+#endif // _PLATFORM_H

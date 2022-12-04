@@ -35,4 +35,4 @@ _start:
         ldr r1 , =0x7fff
         str r1 , [r0]
         ldr sp,=INIT_HEAD_STACK_ADDR
-        bl lmosemhal_start
+        bl VanillaHalStart

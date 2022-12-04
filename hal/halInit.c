@@ -1,3 +1,10 @@
-//
-// Created by morbidark on 22-12-4.
-//
+
+#include "vanillaTypes.h"
+#include "vanillaCtrl.h"
+
+LKHEAD_T void initHal() {
+    initPaltform();
+
+    while(1);
+    return;
+}

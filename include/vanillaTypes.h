@@ -6,5 +6,6 @@
 
 #include "config.h"
 #include "bastype.h"
+#include "halType.h"
 
 #endif

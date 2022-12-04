@@ -1,10 +1,10 @@
 
 //      开始入口文件lmosemhal_start.c
 
-#include "lmosemtypes.h"
-#include "lmosemmctrl.h"
+#include "vanillaTypes.h"
+#include "vanillaCtrl.h"
 
-LKHEAD_T void lmosemhal_start() {
-    while (1);
+LKHEAD_T void VanillaHalStart() {
+    initHal();
     return;
 }

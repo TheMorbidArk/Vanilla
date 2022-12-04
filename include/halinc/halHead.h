@@ -1,8 +1,8 @@
-//
-// Created by morbidark on 22-12-4.
-//
 
-#ifndef VANILLA_HALHEAD_H
-#define VANILLA_HALHEAD_H
+#ifndef _HALHEAD_H
+#define _HALHEAD_H
 
-#endif //VANILLA_HALHEAD_H
+#include "halInit.h"
+#include "platform.h"
+
+#endif //_HALHEAD_H

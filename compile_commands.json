@@ -74,11 +74,11 @@
       "-Wunused-variable",
       "-mtune=arm7tdmi",
       "-o",
-      "lmosemhal_start.o",
-      "../hal/lmosemhal_start.c"
+      "VanillaHalStart.o",
+      "../hal/VanillaHalStart.c"
     ],
     "directory": "/home/morbidark/CodeProjects/Vanilla/build",
-    "file": "/home/morbidark/CodeProjects/Vanilla/hal/lmosemhal_start.c",
-    "output": "/home/morbidark/CodeProjects/Vanilla/build/lmosemhal_start.o"
+    "file": "/home/morbidark/CodeProjects/Vanilla/hal/VanillaHalStart.c",
+    "output": "/home/morbidark/CodeProjects/Vanilla/build/VanillaHalStart.o"
   }
 ]
