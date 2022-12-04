@@ -1,10 +1,9 @@
 /****************************************************************
-        LMOSEM全局类型控制头文件lmosemtypes.h
+        LMOSEM全局类型控制头文件lmosemmctrl.h
 *****************************************************************
-                彭东 ＠ 2013.06.23.11.40
+                彭东 ＠ 2013.06.23.11.45
 ****************************************************************/
-#ifndef _LMOSEMTYPES_H
-#define _LMOSEMTYPES_H
-#include "config.h"
-#include "bastype.h"
+#ifndef _VANILLACTRL_H
+#define _VANILLACTRL_H
+
 #endif
