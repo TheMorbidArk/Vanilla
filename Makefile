@@ -47,17 +47,17 @@ all:
 	$(MAKE) $(ARMLIBSMFLGS)
 	$(MAKE) $(ARMTASKMFLGS)
 	$(MAKE) $(ARMLINKMFLGS)
-	@echo '恭喜我，系统编译构建完成！ ^_^'
+	@echo '===>系统编译构建完成<==='
 
 clean-all:
 	$(CD) $(BUILD_PATH); $(RM) -f *.mkh *.lds *.o *.bin *.i *.elf *.krnl *.s *.map *.lib *.btoj *.vdi *vmdk
 	$(CD) $(EXKNL_PATH); $(RM) -f *.mkh *.lds *.o *.bin *.i *.elf *.krnl *.s *.map *.lib *.btoj *.vdi *vmdk
-	@echo '清理全部已构建文件... ^_^'
+	@echo '--->清理全部已构建文件<---'
 
 clean:
 	$(CD) $(BUILD_PATH); $(RM) -f *.mkh *.lds *.o *.i *.krnl *.s *.map *.lib *.btoj *.vdi *vmdk
 	$(CD) $(EXKNL_PATH); $(RM) -f *.mkh *.lds *.o *.i *.krnl *.s *.map *.lib *.btoj *.vdi *vmdk
-	@echo '清理全部已构建文件,保留目标文件... ^_^'
+	@echo '--->清理全部已构建文件,保留目标文件<---'
 
 print:
 	@echo '*********正在开始编译构建系统*************'

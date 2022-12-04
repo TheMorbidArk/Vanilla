@@ -1,5 +1,6 @@
 
 //        基本数据类型文件bastype_t.h
+
 #ifndef _BASTYPE_T_H
 #define _BASTYPE_T_H
 typedef unsigned char u8_t;

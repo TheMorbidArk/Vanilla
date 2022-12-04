@@ -4,6 +4,6 @@
 
 typedef struct s_LIST {
        struct s_LIST *prev,*next;
-}list_h_t;
+}list_t;
 
 #endif

@@ -5,9 +5,7 @@
 #define _SPINLOCK_T_H
 
 
-
-typedef struct
-{
-	 volatile u32_t lock;
+typedef struct {
+    volatile u32_t lock;
 } spinlock_t;
 #endif
