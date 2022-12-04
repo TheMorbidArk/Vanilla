@@ -3,7 +3,7 @@
 
 #define BUILD_BOOT_OBJS
 #define BUILD_HALY_OBJS init.o VanillaHalStart.o halInit.o \
-                        platfrom.o
+                        platfrom.o vector.o interrupt.o
 #define BUILD_KRNL_OBJS
 #define BUILD_MEMY_OBJS
 #define BUILD_FSYS_OBJS

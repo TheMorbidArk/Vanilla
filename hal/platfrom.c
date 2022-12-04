@@ -48,7 +48,6 @@ LKHEAD_T void s3c2440mmuInvalidDicache() {
             :
             :"cc", "memory", "r0"
             );
-
     return;
 }
 
@@ -94,7 +93,22 @@ LKHEAD_T void s3c2440mmuEnable() {
 }
 
 LKHEAD_T void s3c2440vectorInit() {
+    s3c2440vectorCopy();
+    return;
+}
 
+LKHEAD_T void s3c2440vectorCopy() {
+    u32_t *src_t = (u32_t * )(&__end_lmosem_hal_vector);
+    u32_t *src = (u32_t * )(&vector);
+    u32_t *det = (u32_t * )(CPU_VECTOR_VIRADR);
+    for (uint_t i = 0; i < 4096; i++) {
+        det[i] = 0;
+    }
+    for (; src < src_t; src++, det++) {
+        *det = *src;
+    }
+
+    return;
 }
 
 //#endif
