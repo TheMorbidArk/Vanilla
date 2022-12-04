@@ -6,5 +6,6 @@
 
 LKHEAD_T void VanillaHalStart() {
     initHal();
+    
     return;
 }
