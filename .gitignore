@@ -1,14 +1,3 @@
-.idea
-/build/*.mkh
-/build/*.lds
-/build/*.o
-/build/*.i
-/build/*.krnl
-/build/*.s
-/build/*.map
-/build/*.lib
-/build/*.btoj
-/build/*.vdi
-/build/*vmdk
-/build/*.bin
-/build/*.elf
+/.vs/
+/.visualgdb/
+/build/
