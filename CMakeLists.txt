@@ -11,7 +11,14 @@ find_bsp(
 
 add_bsp_based_executable(
 	NAME Vanilla
-	SOURCES entry.s main.c sbi.h .gitignore
+	SOURCES
+		.gitignore
+		kernel/init/main.c
+		kernel/init/entry.s
+		kernel/sbi/sbi.c
+		include/sbi/sbi.h
+		include/defs.h
 	GENERATE_BIN
 	GENERATE_MAP
 	LINKER_SCRIPT link.ld)
+target_include_directories(Vanilla PRIVATE include/sbi include)
