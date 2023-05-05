@@ -6,7 +6,8 @@ find_bsp(
 	ID com.sysprogs.riscv.kendryte
 	VERSION 1.0
 	MCU K210
-	DISABLE_GNU_EXTENSIONS)
+	DISABLE_GNU_EXTENSIONS
+	HWREGISTER_LIST_FILE k210.mcudef)
 
 add_bsp_based_executable(
 	NAME Vanilla

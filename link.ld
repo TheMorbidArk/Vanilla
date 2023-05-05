@@ -15,17 +15,37 @@ SECTIONS
         etext = .;
   }
 
-  .data : {
-        sdata = .;
-        *(.data .data.*)
-        edata = .;
-  }
+    PROVIDE(etext = .); /* Define the 'etext' symbol to this value */
 
-  .bss : {
-        sbss = .;
-        *(.bss .bss.*)
-        ebss = .;
-  }
+    .rodata : {
+        *(.rodata .rodata.* .gnu.linkonce.r.*)
+    }
 
-  PROVIDE(end = .);
+    /* Adjust the address for the data segment to the next page */
+    . = ALIGN(0x1000);
+
+    /* The data segment */
+    .data : {
+        *(.data)
+        *(.data.*)
+    }
+
+    .sdata : {
+        *(.sdata)
+        *(.sdata.*)
+    }
+
+    PROVIDE(edata = .);
+
+    .bss : {
+        *(.bss)
+        *(.bss.*)
+        *(.sbss*)
+    }
+
+    PROVIDE(end = .);
+
+    /DISCARD/ : {
+        *(.eh_frame .note.GNU-stack)
+    }
 }
