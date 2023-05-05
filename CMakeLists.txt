@@ -33,7 +33,8 @@ add_bsp_based_executable(
 		kernel/libs/r_readline.c
 		kernel/libs/r_stdio.c
 		kernel/libs/r_string.c
-		
+		include/libs/r_iostream.hpp
+		kernel/libs/r_iostream.cpp
 	GENERATE_BIN
 	GENERATE_MAP
 	LINKER_SCRIPT link.ld)

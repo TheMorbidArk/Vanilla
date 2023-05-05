@@ -72,6 +72,7 @@
             <Files />
           </RootVirtualSourceFolder>
           <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
+          <ResourceDirectories />
         </CMakeTargetSpecificSettings>
       </TargetSpecificSettings>
       <SetLDLibraryPathFromDependentArtifacts>true</SetLDLibraryPathFromDependentArtifacts>
@@ -103,6 +104,8 @@
   <ImportedPropertySheets />
   <CodeSense>
     <Enabled>Unknown</Enabled>
+    <CFLAGS>-Wno-c++17-extensions</CFLAGS>
+    <CXXFLAGS>-Wno-c++17-extensions</CXXFLAGS>
     <ExtraSettings>
       <HideErrorsInSystemHeaders>true</HideErrorsInSystemHeaders>
       <SupportLightweightReferenceAnalysis>true</SupportLightweightReferenceAnalysis>
