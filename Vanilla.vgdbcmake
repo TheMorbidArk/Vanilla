@@ -58,7 +58,22 @@
         <BuildAllTargetsInSubdir>false</BuildAllTargetsInSubdir>
         <FoldSingleItemPathLevels>true</FoldSingleItemPathLevels>
       </ProjectItemSettings>
-      <TargetSpecificSettings />
+      <TargetSpecificSettings>
+        <CMakeTargetSpecificSettings>
+          <TargetID>Vanilla</TargetID>
+          <Debug />
+          <Deployment>
+            <Mode>Auto</Mode>
+            <DeployIfNotSpecificallyReferenced>false</DeployIfNotSpecificallyReferenced>
+            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
+          </Deployment>
+          <RootVirtualSourceFolder>
+            <Subfolders />
+            <Files />
+          </RootVirtualSourceFolder>
+          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
+        </CMakeTargetSpecificSettings>
+      </TargetSpecificSettings>
       <SetLDLibraryPathFromDependentArtifacts>true</SetLDLibraryPathFromDependentArtifacts>
       <ProjectGUID>fe2ec751-0cdd-4ae1-ab64-728311038101</ProjectGUID>
       <VirtualFolders />

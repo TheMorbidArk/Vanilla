@@ -10,10 +10,11 @@ SECTIONS
   .text : {
      stext = .;
         *(.text.entry)
-        *(.text .text.*)
+        *(.text .text.* .gnu.linkonce.t.*)
         . = ALIGN(4K);
         etext = .;
   }
+
 
     PROVIDE(etext = .); /* Define the 'etext' symbol to this value */
 

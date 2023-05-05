@@ -2,7 +2,6 @@
 #include <sbi.h>
 #include <defs.h>
 
-
 uint64_t SBI_SET_TIMER = 0;
 uint64_t SBI_CONSOLE_PUTCHAR = 1; 
 uint64_t SBI_CONSOLE_GETCHAR = 2;
