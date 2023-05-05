@@ -15,8 +15,8 @@ add_bsp_based_executable(
 	NAME Vanilla
 	SOURCES
 		.gitignore
-		kernel/init/main.c
 		kernel/init/entry.s
+		kernel/init/main.cpp
 		kernel/sbi/sbi.c
 		include/sbi/sbi.h
 		include/defs.h
@@ -33,6 +33,7 @@ add_bsp_based_executable(
 		kernel/libs/r_readline.c
 		kernel/libs/r_stdio.c
 		kernel/libs/r_string.c
+		
 	GENERATE_BIN
 	GENERATE_MAP
 	LINKER_SCRIPT link.ld)
